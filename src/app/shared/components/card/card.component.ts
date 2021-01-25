@@ -9,6 +9,7 @@ import { Pelicula } from '../../models/peliculas-interface';
 export class CardComponent implements OnInit {
   @Input() cartelera: Pelicula[];
   @Input() category: string;
+
   constructor() {}
 
   ngOnInit(): void {}

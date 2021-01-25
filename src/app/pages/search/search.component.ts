@@ -9,23 +9,24 @@ import { Pelicula } from 'src/app/shared/models/peliculas-interface';
 })
 export class SearchComponent implements OnInit {
   show: boolean;
-  moviesName = '';
   movies: Pelicula[] = [];
 
   constructor(private _api: MoviesService, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.buscarPelicula();
+  }
+
   verPelicula(id: string) {
     this.router.navigate(['/films', id]);
   }
 
-  buscarPelicula(texto = 'a') {
+  buscarPelicula(texto: string = 'a') {
     if (texto.length > 0) {
       this.show = true;
       this._api.searchMovies(texto).subscribe((peliculas: any) => {
         this.movies = peliculas;
         this.show = false;
-        this.moviesName = texto;
       });
     } else {
       return;

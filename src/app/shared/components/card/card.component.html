@@ -10,5 +10,19 @@
         </p>
       </div>
     </div>
+
+    <!-- <div
+      class="card"
+      (click)="verPelicula(pelicula.id)"
+      *ngFor="let pelicula of cartelera | filter: moviesName"
+    >
+      <img [src]="pelicula | noImg" class="card-img-top" />
+      <div class="card-body">
+        <h5 class="card-title">{{ pelicula.titulo | slice: 0:15 }}</h5>
+        <p class="card-text">
+          <i class="fas fa-star"></i> {{ pelicula.puntuacion }} / 10
+        </p>
+      </div>
+    </div> -->
   </div>
 </div>
