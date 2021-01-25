@@ -1,0 +1,35 @@
+<form class="form">
+  <div class="form-row justify-content-md-center d-flex">
+    <div class="form-group col-md-8">
+      <input
+        #input
+        (keyup)="buscarPelicula(input.value)"
+        class="form-control"
+        type="text"
+        placeholder="Search Films..."
+        pattern="[a-zA-Z ]"
+      />
+    </div>
+  </div>
+</form>
+
+<div class="text-center" *ngIf="show">
+  <div style="width: 5rem; height: 5rem" class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+
+<div class="films" *ngIf="!show">
+  <!-- <app-card></app-card> -->
+  <div
+    class="films_card"
+    (click)="verPelicula(pelicula.id)"
+    *ngFor="let pelicula of movies | filter: moviesName"
+  >
+    <img [src]="pelicula | noImg" class="films_img" />
+    <div class="films_body">
+      <h5 class="films_title">{{ pelicula.titulo | slice: 0:15 }}</h5>
+      <span><i class="fas fa-star"></i> {{ pelicula.puntuacion }} / 10</span>
+    </div>
+  </div>
+</div>
