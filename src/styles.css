@@ -8,3 +8,6 @@ body {
 .nav-item {
   margin-left: 1em !important;
 }
+.fa-pulse {
+  color: #ffffff;
+}

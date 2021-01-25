@@ -1,7 +1,11 @@
 <div class="cards my-3">
   <h5 class="text-white">{{ category }}</h5>
   <div class="card-columns mt-3">
-    <div class="card" *ngFor="let pelicula of cartelera">
+    <div
+      class="card"
+      *ngFor="let pelicula of cartelera"
+      (click)="verPelicula(pelicula.id)"
+    >
       <img [src]="pelicula | noImg" class="card-img-top" alt="cards" />
       <div class="card-body">
         <h5 class="card-title name">{{ pelicula.titulo | slice: 0:15 }}</h5>

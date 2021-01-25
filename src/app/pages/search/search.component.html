@@ -13,23 +13,8 @@
   </div>
 </form>
 
-<div class="text-center" *ngIf="show">
-  <div style="width: 5rem; height: 5rem" class="spinner-border" role="status">
-    <span class="sr-only">Loading...</span>
-  </div>
+<div class="text-center text-red" *ngIf="show">
+  <i class="fas fa-spinner fa-pulse fa-5x"></i>
 </div>
 
 <app-card [cartelera]="movies"></app-card> -->
-<!--   <div
-    class="card"
-    (click)="verPelicula(pelicula.id)"
-    *ngFor="let pelicula of movies | filter: moviesName"
-  >
-    <img [src]="pelicula | noImg" class="card-img-top" />
-    <div class="card-body">
-      <h5 class="card-title">{{ pelicula.titulo | slice: 0:15 }}</h5>
-      <p class="card-text">
-        <i class="fas fa-star"></i> {{ pelicula.puntuacion }} / 10
-      </p>
-    </div>
-  </div> -->
