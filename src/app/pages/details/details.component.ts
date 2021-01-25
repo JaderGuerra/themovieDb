@@ -23,7 +23,6 @@ export class DetailsComponent implements OnInit {
     const id = this.ar.snapshot.paramMap.get('id');
 
     this._api.seletedMovie(id).subscribe((movie: Pelicula) => {
-      console.log(movie);
       this.movieDetails = movie;
     });
   }
