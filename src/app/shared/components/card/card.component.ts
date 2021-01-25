@@ -16,6 +16,6 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {}
 
   verPelicula(id: string) {
-    this.router.navigate(['/films', id]);
+    this.router.navigate(['/details', id]);
   }
 }

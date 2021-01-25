@@ -1,8 +1,6 @@
-.fas {
-  margin: 5px;
-  color: yellow;
+.card {
+  cursor: pointer;
 }
-
 @media only screen and (min-width: 360px) {
   .card-columns {
     column-count: 2;

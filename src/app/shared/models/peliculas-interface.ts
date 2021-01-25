@@ -4,4 +4,7 @@ export interface Pelicula {
   background?: string;
   titulo: string;
   puntuacion: string;
+  descripcion?: string;
+  fecha?: string;
+  votos?: string;
 }

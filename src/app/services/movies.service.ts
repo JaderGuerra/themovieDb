@@ -80,4 +80,21 @@ export class MoviesService {
         })
       );
   }
+
+  seletedMovie(movieId: string) {
+    return this.getQuerys(`${movieId}`).pipe(
+      map((resp: any) => {
+        return {
+          id: resp.id,
+          imagen: resp.poster_path,
+          background: resp.backdrop_path,
+          titulo: resp.title,
+          puntuacion: resp.vote_average,
+          descripcion: resp.overview,
+          fecha: resp.release_date,
+          votos: resp.vote_count,
+        };
+      })
+    );
+  }
 }

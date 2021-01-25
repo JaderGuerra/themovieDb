@@ -11,3 +11,7 @@ body {
 .fa-pulse {
   color: #ffffff;
 }
+.fa-star {
+  margin: 5px;
+  color: yellow;
+}

@@ -8,10 +8,10 @@ export class NoImgPipe implements PipeTransform {
     let url = 'https://image.tmdb.org/t/p/w300';
 
     if (imagenes.imagen) {
-      return url + imagenes.imagen;
+      return url + imagenes?.imagen;
     } else {
       if (imagenes.background) {
-        return url + imagenes.background;
+        return url + imagenes?.background;
       } else {
         return '../assets/noImagen.jpg';
       }
